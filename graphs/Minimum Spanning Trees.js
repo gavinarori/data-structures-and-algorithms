@@ -1,4 +1,4 @@
-
+//Kruskal's algorithm is a popular minimum-spanning-tree algorithm which finds an edge of the least possible weight that connects any two trees in the forest. It is a greedy algorithm. This tutorial will guide you on how to implement Kruskal's algorithm in JavaScript.
 const graph = [
     { source: 'A', destination: 'B', weight: 1 },
     { source: 'A', destination: 'C', weight: 3 },
