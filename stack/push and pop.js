@@ -6,4 +6,4 @@
  console.log(stack.pop())
  console.log(stack)
  console.log(stack.pop())
- console.log(stack)
+
