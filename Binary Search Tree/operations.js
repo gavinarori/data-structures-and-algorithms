@@ -113,3 +113,52 @@ class BinarySearchTreeNode {
       }
     }
   }
+
+  const tree = new BinarySearchTree(30);
+
+tree.insert(10);
+tree.insert(15);
+tree.insert(12);
+tree.insert(40);
+tree.insert(35);
+tree.insert(50);
+
+[...tree.preOrderTraversal()].map(x => x.value);
+// [30, 10, 15, 12, 40, 35, 50]
+
+[...tree.inOrderTraversal()].map(x => x.value);
+// [10, 12, 15, 30, 35, 40, 50]
+
+[...tree.postOrderTraversal()].map(x => x.value);
+// [12, 15, 10, 35, 50, 40, 30]
+
+tree.root.value;                // 30
+tree.root.hasChildren;          // true
+
+tree.find(12).isLeaf;           // true
+tree.find(40).isLeaf;           // false
+tree.find(50).parent.value;     // 40
+tree.find(15).left.value;       // 12
+tree.find(12).right;            // null
+
+tree.remove(12);
+
+[...tree.preOrderTraversal()].map(x => x.value);
+// [30, 10, 15, 40, 35, 50]
+
+tree.remove(10);
+
+[...tree.preOrderTraversal()].map(v => ({
+  key: v.key,
+  parent: v.parent ? v.parent.key : null,
+})); // [30, 15, 40, 35, 50]
+
+tree.remove(40);
+
+[...tree.preOrderTraversal()].map(x => x.value);
+// [30, 15, 40, 35, 50]
+
+tree.remove(30);
+
+[...tree.preOrderTraversal()].map(x => x.value);
+// [15, 35, 50]
