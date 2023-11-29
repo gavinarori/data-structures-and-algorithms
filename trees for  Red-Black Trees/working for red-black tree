@@ -1,0 +1,13 @@
+const t = new Tree();
+
+for (let i = 1; i < 20; i++) {
+    t.insert({ key: i });
+}
+t.printTree();
+
+for (let i = 1; i < 20; i++) {
+    if (i % 3 === 0) {
+        t.deleteNode(i);
+    }
+}
+t.printTree();
