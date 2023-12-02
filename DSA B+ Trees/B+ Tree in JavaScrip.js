@@ -573,7 +573,6 @@ leaf = function () {
           delKey = curNod.merge(sibR, parNod, parItm);
        }
  
-       // Next level
        if (stack.length === 0 && parNod.keyval.length === 0) {
           this.root = curNod;
           break;
