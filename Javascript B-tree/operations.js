@@ -128,8 +128,7 @@
     root.insert(78);
     root.insert(29);
     root.insert(7);
-    // debugger;
-    // root.insert(100);
+
     
     printKeys();
     
