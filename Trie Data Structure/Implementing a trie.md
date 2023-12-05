@@ -1,0 +1,8 @@
+In this example, we define two classes, TrieNode and Trie, where TrieNode represents each node in the trie, and Trie represents the overall trie data structure. The Trie class has three methods: insert, search, and startsWith.
+
+The insert method is used to insert a new word into the trie. It takes a string as an argument, and it iterates over each character in the string. For each character, it checks if there is a child node with that character. If there is no child node with that character, it creates a new node and adds it as a child of the current node. It then sets the isEndOfWord property to true for the last character in the string to indicate that this node represents the end of a complete word.
+
+
+The search method is used to search for a specific word in the trie. It takes a string as an argument and iterates over each character in the string. For each character, it checks if there is a child node with that character. If there is no child node with that character, it returns false. If it reaches the end of the string and the isEndOfWord property is set to true for the last node, it returns true.
+
+The startsWithmethod is used to check if a prefix exists in the trie. It takes a string as an argument and iterates over each character in the string. For each character, it checks if there is a child node with that character. If there is no child node with that character, it returns false. If it reaches the end of the string, it returns true.
