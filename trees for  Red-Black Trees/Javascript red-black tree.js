@@ -37,7 +37,7 @@ class Tree {
             } else {
                 position = 'ROOT-';
             }
-            // Print info about node
+            
             console.log(`${item.str}${position} ${item.node.key} (${item.node.color})`);
     
             // Add node children into stack

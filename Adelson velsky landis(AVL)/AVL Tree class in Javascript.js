@@ -1,6 +1,6 @@
 class AVLTree {
     constructor() {
-       // Initialize a root element to null.
+      
        this.root = null;
     }
  
